@@ -1,0 +1,208 @@
+/* pages/detail/index.wxss */
+
+#detail_page {
+  width: 94%;
+  height: 100vh;
+  margin-left: 3%;
+  margin-right: 3%;
+ 
+}
+
+.pic_window {
+  width: 100%;
+  padding-top: 3%;
+}
+
+.scroll_pic {
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+.slide-image {
+  height: 100%;
+  width: 300rpx;
+  display: inline-block;
+
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+}
+
+#info_area {
+  width: 94%;
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  height: 480rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: white;
+}
+
+#marketName {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 145%;
+  text-align: center;
+  font-weight: bold;
+}
+
+#addr_phone {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 120rpx;
+  
+}
+
+#position_icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 15rpx;
+}
+
+#addr_text {
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 90%;
+  
+}
+
+#address_area {
+  width: 550rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  
+}
+
+#phone_icon {
+  width: 65rpx;
+  height: 65rpx;
+  margin-left: 20rpx;
+  margin-top: 27.5rpx;
+}
+
+.separation_x_line {
+  height: 1px;
+  width: 100%;
+  background-color: #e5e5e5;
+  overflow: hidden;
+}
+
+.separation_y_line {
+  height: 50rpx;
+  width: 1px;
+  margin-top: 35rpx;
+  background-color: #e5e5e5;
+  overflow: hidden;
+}
+
+#detail_grade_area {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+#detail_grade_btn {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 50rpx;
+  margin-top: 30rpx;
+  font-size: 90%;
+}
+
+#detail_grade_view {
+  width: 500rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+#detail_grade_text {
+  line-height: 120rpx;
+  
+  /*font-size: 90%;*/
+
+}
+
+#detail_star_pos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 12rpx;
+}
+
+#detail_stars {
+  width: 50rpx;
+  height: 50rpx;
+  background-size: 50rpx 50rpx;
+  margin-left: 4rpx;
+  margin-top: 36rpx;
+}
+
+#all_detail {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+#grade_detail {
+  display: flex;
+  flex-direction: row;
+  width: 220rpx;
+  height: 120rpx;
+
+  margin-left: 30rpx;
+  /*font-size: 90%;*/
+
+}
+#gdetail_text
+{
+  line-height: 120rpx;
+  text-align: center;
+  margin-left: 10rpx;
+}
+#pen_icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 35rpx;
+}
+
+#babatandian {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+ 
+}
+
+#separation_y_lines {
+  height: 50rpx;
+  width: 1px;
+  margin-top: 16rpx;
+  background-color: #e5e5e5;
+  overflow: hidden;
+}
+
+#shop_icon {
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 20rpx;
+  margin-left: 28%;
+}
+
+#shop_detail {
+  margin-left: 10rpx;
+  font-size: 135%;
+  font-weight:bold;
+}

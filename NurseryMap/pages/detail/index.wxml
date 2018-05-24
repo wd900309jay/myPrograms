@@ -1,0 +1,73 @@
+<!--pages/detail/index.wxml-->
+<!--import src="../../template/tarBar.wxml" />
+<template is="tabBar" data="{{tabBar: tabBar}}" /-->
+<view class="container">
+  <view id='detail_page'>
+    <!--商品母婴室图片展示-->
+    <view class='pic_window'>
+      <scroll-view scroll-x="true" class="scroll_pic">
+        <!--  display: inline-block-->
+        <block wx:for="{{imgUrls}}">
+          <image src="{{item}}" class="slide-image" />
+        </block>
+      </scroll-view>
+    </view>
+    <!--商场信息-->
+    <view id='info_area'>
+      <view id='marketName'>
+        {{name}}</view>
+      <!--分割线-->
+      <view class='separation_x_line'></view>
+      <!--地址电话展示-->
+      <view id='addr_phone'>
+        <view id='address_area' data-name='{{name}}' data-lat='{{lat}}' data-lng='{{lng}}' bindtap='navToPos'>
+
+          <text id='addr_text'>{{address}}</text>
+          <view id='separation_y_lines'></view>
+          <image id='position_icon' src='../../images/detail/position.png'></image>
+        </view>
+        <view class='separation_y_line'></view>
+        <image id='phone_icon' src='../../images/detail/phone.png' data-phone='{{phone}}' bindtap='phoneCall'></image>
+      </view>
+
+      <view class='separation_x_line'></view>
+      <!--评分展示-->
+      <view id='detail_grade_area'>
+        <view id='detail_grade_view'>
+          <view id='detail_grade_text'>母婴室评分:</view>
+          <view id='detail_star_pos'>
+            <image id='detail_stars' src="{{flag>=1? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}"  />
+            <image id='detail_stars' src="{{flag>=2? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}"  />
+            <image id='detail_stars' src="{{flag>=3? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}"  />
+            <image id='detail_stars' src="{{flag>=4? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}"  />
+            <image id='detail_stars' src="{{flag>=5? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}"  />
+          </view>
+        </view>
+        <view class='separation_y_line'></view>
+        <!--image id='phone_icon' src='../../images/detail/park.png' data-phone='{{phoneNum}}' bindtap='parkCar'></image-->
+
+
+        <view id="grade_detail" bindtap='navToGradeDetail' data-marketid='{{marketId}}'>
+          <image id='pen_icon' src='../../images/detail/write.png'></image>
+          <text id='gdetail_text'>评价详情</text>
+          </view>
+      </view>
+      <view class='separation_x_line'></view>
+      <view id='all_detail'>
+
+        <!--view class='separation_y_line'></view-->
+        <view id="babatandian" data-link='{{link}}' bindtap='navToTanTanDetail'>
+          <image id='shop_icon' src='../../images/detail/shop.png'></image>
+          <text id='shop_detail'>探店详情</text>
+        </view>
+      </view>
+    </view>
+
+    <!--广告区域-->
+    <view id='advert_area'>
+
+    </view>
+
+  </view>
+
+</view>

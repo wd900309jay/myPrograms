@@ -1,0 +1,62 @@
+<!--加载更多 模版-->
+<template name="loading">
+    <view class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+</template>
+
+<template name="nodata">
+    <view class="weui-loadmore">
+      <view class="weui-loadmore__tips" style="color:#888">欢迎大家留言</view>
+    </view>
+</template>
+
+<template name="commentsTemplate">
+  <view class='comment-item'>
+   
+      <view class="i-left">
+        <image class="c-u-img" src="{{c.avataUrl}}"></image>
+      </view>
+      <view class="i-right">
+        <view class="top">
+          <text class="u-name">{{c.nickName}}</text>
+          <text class="time">{{c.createTime}}</text>
+        </view>
+        <view class='grade_area'>
+          <!--总体打分  -->
+          <view class='general_grade'>
+            <text>评分</text>
+            <view class='star_pos'>
+              <image class='stars' src="{{c.starLevel>=1? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" />
+              <image class='stars' src="{{c.starLevel>=2? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}"  />
+              <image class='stars' src="{{c.starLevel>=3? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" />
+              <image class='stars' src="{{c.starLevel>=4? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}"  />
+              <image class='stars' src="{{c.starLevel>=5? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}"  />
+            </view>
+            <text id='grade_text'>{{grade_text}}</text>
+          </view>
+        </view>
+        <view class='child_grade'>
+         <text class='first'>环境:{{c.envLevel}}</text>
+        <text >设施:{{c.devLevel}}</text>
+        <text >空气:{{c.airLevel}}</text>
+        </view>
+        <!--评论内容-->
+        <view class="content">
+          {{c.content}}
+        </view>
+        <view class='photograph_area'>
+          <block wx:for="{{c.photoUrls}}" wx:for-item="pic" wx:key="">
+            <image class='photo_select' src="{{pic}}" bindtap='previImage' data-path="{{c.photoUrls}}"></image>
+          </block>
+        </view>
+        <view class='like_area' catchtap='GiveThumbUp' data-like="{{c.like}}" data-count="{{c.likeCount}} " data-commentid="{{c.commentId}}">
+          <image class="thumb {{c.like?'clickthumb':''}}" src="{{c.like? '../../images/comments/Like.png': '../../images/comments/noLike.png'}}"></image>
+          <text>{{c.likeCount==0?'赞':c.likeCount}}</text>
+        </view>
+      </view>
+   
+  </view>
+</template>
+

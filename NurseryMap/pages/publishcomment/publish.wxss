@@ -1,0 +1,176 @@
+/* pages/publish/publish.wxss */
+
+.comment_area
+{
+  width: 100%;
+  /* height: 60vh; */
+  background: white;
+
+}
+.publish_grade_area {
+  width: 100%-40rpx;
+  margin:0 20rpx;
+ 
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid blue;  */
+}
+.general_grade{
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid blue; */
+}
+
+.grade_btn {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 50rpx;
+  margin-top: 30rpx;
+  font-size: 90%;
+   /* border: 1px solid blue; */
+}
+
+
+
+.general_grade text {
+  line-height: 120rpx;
+  font-size: 120%;
+  
+  /* border: 1px solid blue;  */
+}
+#grade_text
+{
+  position: absolute;
+  right: 20rpx;
+  font-size: 90%;
+  color: #a1a1a1;
+}
+
+.star_pos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 12rpx;
+
+  /* border: 1px solid blue;  */
+}
+
+.stars {
+  width: 64rpx;
+  height: 64rpx;
+  background-size: 60rpx 60rpx;
+  margin-left: 4rpx;
+  margin-top: 28rpx;
+}
+.content_area
+{
+  width: 100%-40rpx;
+  margin: 20rpx;
+  height: 300rpx;
+  display: flex;
+  flex-direction:column;
+  /* border: 1px solid blue; */
+
+}
+.content_text{
+  width: 100%;
+  /* border: 1px solid blue; */
+  height: 240rpx;
+ 
+}
+.remind_text{
+  width: 100%;
+  margin-top: 20rpx;
+   /* border: 1px solid blue;  */
+  font-size: 12px;
+  color: #a1a1a1;
+  text-align: end;
+  height: 40rpx;
+  
+}
+.photograph_area
+{
+  width: 100%-40rpx;
+  margin: 20rpx;
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap ;
+  /* border: 1px solid blue; */
+  position: relative;
+  padding-bottom: 20rpx;
+}
+.photo_select 
+{
+  width: 160rpx;
+  height: 160rpx;
+  /* border: 1px solid blue; */
+  margin:7rpx;
+  border-radius: 5px;
+}
+.photo_select:hover:active
+{
+  background: #f1f1f1;
+}
+.publish_btn{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  background-color: #f66666;
+  border-radius: 0px;
+}
+.publish_btn:hover:active{
+
+  background-color: #f88888;
+}
+.label_area
+{
+  /* margin-top: 20rpx; */
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+.label_area .title{
+  margin: 20rpx;
+
+  font-size: 120%;
+   
+}
+
+.label_text
+{
+  height: 60rpx;
+  border: 1px solid blue;
+  border-radius: 10rpx;
+  background-color: #f66666;
+  color: white;
+}
+.single_grade
+{
+  /* border: 1px solid blue; */
+}
+.checkbox{
+   display: none;
+  flex-direction: row;
+}
+.checkbox_area{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.checkbox_view{
+  
+  /* border: 1px solid blue; */
+  border-radius: 30rpx;
+  margin:5px;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  /* background: #f1f1f1; */
+}
+
+.checkbox_view text{
+  margin: auto 30rpx auto 30rpx;
+}

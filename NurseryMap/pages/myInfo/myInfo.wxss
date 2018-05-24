@@ -1,0 +1,97 @@
+/* pages/myInfo/myInfo.wxss */
+
+.userInfo_area
+{
+  width: 100%;
+  height: 400rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+   /* border: 1px solid blue;  */
+ 
+}
+.userInfo_area .u_img
+{
+	display: inline-block;
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 50%;
+	margin: 80rpx auto 20rpx;
+     /* border: 1px solid blue;  */
+ 
+}
+.userInfo_area text
+{
+
+	width: 100%;
+	height: 70rpx;
+    /* border: 1px solid blue;  */
+}
+.vip_img
+{
+  width: 50rpx;
+  height: 50rpx;
+   /* border: 1px solid blue;  */
+  margin: auto;
+}
+.menu_area
+{
+  width: 100%;
+  /* height: 403rpx; */
+  background-color: white;
+  margin-top:50rpx;
+  padding-left: 50rpx;
+
+}
+.separation_x_line {
+  height: 1px;
+  width: 88%;
+  background-color: #d1d1d1;
+  overflow: hidden;
+
+}
+
+.separation_y_line {
+  height: 50rpx;
+  width: 1px;
+  margin-top: 35rpx;
+  background-color: #d1d1d1;
+  overflow: hidden;
+}
+.primaryMenu{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.menuName
+{
+  width: 90%;
+  height: 100%;
+  line-height: 100rpx;
+}
+
+#triangle-facing-right {  
+    
+    display: inline-block;
+    border-right: 1px solid  #d1d1d1; 
+    border-bottom: 1px solid  #d1d1d1;  
+    width: 20rpx; 
+    height: 20rpx;  
+    margin-top: 40rpx;
+    right: 50rpx;
+    position: absolute;  
+    transform: rotate(-45deg);
+
+
+}  
+
+.actionBtn
+{
+  width: 100%;
+  height: 100rpx;
+  bottom: 50rpx;
+  position: absolute;  
+  background-color: white;
+}

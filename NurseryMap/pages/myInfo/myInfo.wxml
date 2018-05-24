@@ -1,0 +1,30 @@
+<!--pages/myInfo/myInfo.wxml-->
+
+<view class='container'>
+  <view class='userInfo_area'>
+    <image class='u_img'src='{{userInfo.avatarUrl}}'></image>
+    <text>{{userInfo.nickName}}</text>
+    <image class='vip_img' src='../../images/myInfo/vip.png'></image> 
+  </view>
+  <!--菜单栏-->
+  <view class='menu_area'>
+
+    <view class='primaryMenu'>
+      <view class='menuName' data-menu_id='0x01' bindtap='menuBtn'>我的主页</view>
+      <view id='triangle-facing-right' />
+    </view>
+
+    <view class='separation_x_line'></view>
+    <view class='primaryMenu'>
+      <view class='menuName' data-menu_id='0x02' bindtap='menuBtn'>意见反馈</view>
+      <view id='triangle-facing-right' />
+    </view>
+    <view class='separation_x_line'></view>
+    <view class='primaryMenu'>
+      <view class='menuName' data-menu_id='0x03' bindtap='menuBtn'>关于我们</view>
+      <view id='triangle-facing-right' />
+    </view>
+
+  </view>
+  <button class='actionBtn' open-type='getUserInfo' bindgetuserinfo='loginAction'>{{status_text}}</button>
+</view>

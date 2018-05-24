@@ -1,0 +1,20 @@
+{
+  "enablePullDownRefresh": false,
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "地图",
+        "iconPath": "images/map/ic_position.png",
+        "selectedIconPath": "images/map/ic_position.png"
+      },
+      {
+        "pagePath": "pages/detail/index",
+        "text": "评论",
+        "iconPath": "images/map/ic_location.png",
+        "selectedIconPath": "images/map/ic_location.png"
+      }
+    ]
+  }
+  
+}

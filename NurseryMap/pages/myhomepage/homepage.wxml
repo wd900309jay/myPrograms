@@ -1,0 +1,50 @@
+<!--pages/myhomepage/homepage.wxml-->
+<import src="../../template/tempList.wxml" />
+<view class='container'>
+  <view class='basicInfo' ><image class='back_img' src='../../images/resource/daddyok.jpg'></image>
+    <view class='b_left'>
+      <image class='u_img' src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class='b_right'>
+      <text>{{userInfo.nickName}}</text>
+      <image class='vipRank_img' src='../../images/myInfo/vip.png'></image>
+    </view>
+  </view>
+
+  <view class="navbar">
+    <view wx:for="{{navTypes}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</view>
+  </view>
+  <view class='navContainer' wx:if="{{currentTab==0}}">
+    <view class="item" wx:if="{{comments.length==0}}">
+      <view class='noInfoView'>
+        <image class="noInfoIcon" src="../../images/resource/empty.png" />
+        <text class="noInfoWarn">您暂时没有任何评论</text>
+      </view>
+    </view>
+    <view class="item" wx:for="{{comments}}" wx:key="" wx:for-item="c">
+      <template is='commentsTemplate' data="{{c}}" />
+    </view>
+  </view>
+  <view class='navContainer' wx:if="{{currentTab==1}}">
+    <view class="item" wx:if="{{collection.length==0}}">
+      <view class='noInfoView' >
+        <image class="noInfoIcon" src="../../images/resource/empty.png" />
+        <text class="noInfoWarn">您暂时没有任何收藏</text>
+      </view>
+    </view>
+    <view class="item" wx:for="{{collection}}" wx:key="" wx:for-item="collectItem">
+      <template is='collectionTemplate' />
+    </view>
+  </view>
+  <view class='navContainer' wx:if="{{currentTab==2}}">
+    <view class="item" wx:if="{{memberInfo.length==0}}">
+      <view class='noInfoView' >
+        <image class="noInfoIcon" src="../../images/resource/empty.png" />
+        <text class="noInfoWarn">此功能正在开发中，请等待...</text>
+      </view>
+    </view>
+    <view class="item" wx:for="{{memberInfo}}" wx:key="" wx:for-item="mItem">
+      <template is='memberTemplate' />
+    </view>
+  </view>
+</view>

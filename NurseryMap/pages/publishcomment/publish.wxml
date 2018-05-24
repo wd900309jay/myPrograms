@@ -1,0 +1,94 @@
+<!--pages/publish/publish.wxml-->
+<view class='container'>
+  <form bindsubmit='bindFormSubmit'>
+    <view class='comment_area'>
+      <!--评分区域  -->
+      <view class='publish_grade_area'>
+        <!--总体打分  -->
+        <view class='general_grade'>
+          <text>{{total_grade.name}}</text>
+          <view class='star_pos'>
+            <image class='stars' data-flag="1" data-type='total' src="{{total_grade.flag>=1? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+            <image class='stars' data-flag="2" data-type='total' src="{{total_grade.flag>=2? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+            <image class='stars' data-flag="3" data-type='total' src="{{total_grade.flag>=3? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+            <image class='stars' data-flag="4" data-type='total' src="{{total_grade.flag>=4? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+            <image class='stars' data-flag="5" data-type='total' src="{{total_grade.flag>=5? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+          </view>
+          <text id='grade_text'>{{total_grade.grade_text}}</text>
+        </view>
+        <!--单项点评  -->
+        <view class='single_grade' hidden='{{total_grade.gradeStatus}}'>
+          <!--环境点评  -->
+          <view class='general_grade'>
+            <text>{{env_grade.name}}</text>
+            <view class='star_pos'>
+              <image class='stars' data-flag="1" data-type='env' src="{{env_grade.flag>=1? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+              <image class='stars' data-flag="2" data-type='env' src="{{env_grade.flag>=2? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+              <image class='stars' data-flag="3" data-type='env' src="{{env_grade.flag>=3? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+              <image class='stars' data-flag="4" data-type='env' src="{{env_grade.flag>=4? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+              <image class='stars' data-flag="5" data-type='env' src="{{env_grade.flag>=5? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+            </view>
+            <text id='grade_text'>{{env_grade.grade_text}}</text>
+          </view>
+          <!--设施点评  -->
+          <view class='general_grade'>
+            <text>{{dev_grade.name}}</text>
+            <view class='star_pos'>
+              <image class='stars' data-flag="1" data-type='dev' src="{{dev_grade.flag>=1? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+              <image class='stars' data-flag="2" data-type='dev' src="{{dev_grade.flag>=2? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+              <image class='stars' data-flag="3" data-type='dev' src="{{dev_grade.flag>=3? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+              <image class='stars' data-flag="4" data-type='dev' src="{{dev_grade.flag>=4? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+              <image class='stars' data-flag="5" data-type='dev' src="{{dev_grade.flag>=5? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+            </view>
+            <text id='grade_text'>{{dev_grade.grade_text}}</text>
+          </view>
+          <!--空气点评 -->
+          <view class='general_grade'>
+            <text>{{air_grade.name}}</text>
+            <view class='star_pos'>
+              <image class='stars' data-flag="1" data-type='air' src="{{air_grade.flag>=1? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+              <image class='stars' data-flag="2" data-type='air' src="{{air_grade.flag>=2? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+              <image class='stars' data-flag="3" data-type='air' src="{{air_grade.flag>=3? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+              <image class='stars' data-flag="4" data-type='air' src="{{air_grade.flag>=4? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+              <image class='stars' data-flag="5" data-type='air' src="{{air_grade.flag>=5? '../../images/detail/star_on.png': '../../images/detail/star_off.png'}}" bindtap="totalGrade" />
+            </view>
+            <text id='grade_text'>{{air_grade.grade_text}}</text>
+          </view>
+        </view>
+      </view>
+      <!--点评内容  -->
+      <view class='content_area'>
+
+        <textarea class="content_text" name='textarea' bindinput="textAreaInput" maxlength="500" auto-focus='true' value="{{content}}" placeholder="亲，欢迎在这里点评~" />
+
+        <!-- <view class='emoji_btn'></view> -->
+        <text class="remind_text" selectable='false'>{{remind_text}}</text>
+
+
+      </view>
+      <!--上传照片  -->
+      <view class='photograph_area'>
+        <block wx:for="{{tempFilePaths}}" wx:for-item="pic" wx:key="">
+          <image class='photo_select' src="{{pic}}" bindtap='previImage' data-path="{{tempFilePaths}}"></image>
+        </block>
+        <image class='photo_select' src="/images/comments/add_pic.png" bindtap='selectPhotos'></image>
+      </view>
+    </view>
+    <!--评论标签  -->
+    <!-- <view class='label_area'>
+    <text class='title'>打标签</text>
+    <checkbox-group class='checkbox_group' bindchange="checkboxChange">
+      <view class='checkbox_area'>
+        <label class="checkbox_lable" wx:for="{{items}}">
+          <checkbox class='checkbox' value="{{item.index}}" checked="{{item.checked}}" />
+          <view class='checkbox_view' style="background-color:{{item.bcolor}}">
+            <text>{{item.value}}</text>
+          </view>
+        </label>
+      </view>
+    </checkbox-group>
+  </view> -->
+    <!--发表评论按钮  -->
+    <button class='publish_btn' form-type='submit'>发表</button>
+  </form>
+</view>

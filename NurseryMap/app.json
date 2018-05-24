@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/index",
+    "pages/web/index",
+    "pages/myInfo/myInfo",
+    "pages/comments/comments",
+    "pages/publishcomment/publish",
+    "pages/myhomepage/homepage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#faca32",
+    "navigationBarTitleText": "爸爸探店",
+    "navigationBarTextStyle": "black"
+  }
+}
