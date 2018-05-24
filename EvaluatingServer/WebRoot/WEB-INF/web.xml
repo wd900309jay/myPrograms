@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>EvaluatingServer</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>LoginOnServlet</servlet-name>
+    <servlet-class>daddyok.weapp.controler.servlet.LoginOnServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginOnServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>NurseryInfoServlet</servlet-name>
+    <servlet-class>daddyok.weapp.controler.servlet.NurseryInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NurseryInfoServlet</servlet-name>
+    <url-pattern>/NurseryInfo</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>CommentServlet</servlet-name>
+    <servlet-class>daddyok.weapp.controler.servlet.CommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CommentServlet</servlet-name>
+    <url-pattern>/CommentsInfo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>UserInfoServlet</servlet-name>
+    <servlet-class>daddyok.weapp.controler.servlet.UserInfoServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>UserInfoServlet</servlet-name>
+    <url-pattern>/DecryptUserInfo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MaterialServlet</servlet-name>
+    <servlet-class>daddyok.weserver.controler.servlet.MaterialServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MaterialServlet</servlet-name>
+    <url-pattern>/GetMaterial</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
